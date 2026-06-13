@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1OF1 DECISION — We Scale Brands Into Money Machines</title>
+  <meta name="description" content="1of1 Decision — performance marketing agency. We turn ad spend into predictable revenue. 21 accounts, 7 countries, $1M+ scaled." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800;900&family=Playfair+Display:wght@700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Overlays -->
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <img src="assets/logo.png" alt="1of1 Decision" class="loader-logo" />
+      <div class="loader-count" id="loaderCount">0</div>
+      <div class="loader-label">LOADING THE MACHINE</div>
+    </div>
+  </div>
+
+  <!-- Particle canvas -->
+  <canvas class="money-rain" id="moneyRain"></canvas>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav-logo" data-hover><img src="assets/logo.png" alt="1of1 Decision" /></a>
+    <div class="nav-links">
+      <a href="#work" data-hover>Work</a>
+      <a href="#framework" data-hover>Framework</a>
+      <a href="#results" data-hover>Numbers</a>
+      <a href="#reviews" data-hover>Reviews</a>
+      <a href="#contact" class="nav-cta" data-hover>Apply to Scale</a>
+    </div>
+    <button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="ticker ticker-top">
+      <div class="ticker-track">
+        <span>PRECISION MEDIA BUYING ✦ CREATIVE THAT CONVERTS ✦ RETENTION ON AUTOPILOT ✦ 7 COUNTRIES ✦ $1M+ SCALED ✦ NO DARK DATA ✦ </span>
+        <span>PRECISION MEDIA BUYING ✦ CREATIVE THAT CONVERTS ✦ RETENTION ON AUTOPILOT ✦ 7 COUNTRIES ✦ $1M+ SCALED ✦ NO DARK DATA ✦ </span>
+      </div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-eyebrow" data-reveal>
+        <span class="dot"></span> 21 ACCOUNTS · 7 COUNTRIES · $126K/MO IN MANAGED SPEND
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line"><span class="word">WE SCALE</span></span>
+        <span class="line"><span class="word">BRANDS INTO</span></span>
+        <span class="line"><span class="word gold">MONEY MACHINES</span></span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-sub" data-reveal>
+          We don't "do content." We do math — attention in, revenue out.
+          Performance marketing engineered to turn every dollar of ad spend
+          into predictable, scalable profit. Boring agencies guess. We close.
+        </p>
+        <div class="hero-cta-group" data-reveal>
+          <a href="#contact" class="btn-primary" data-hover data-magnetic>
+            <span>APPLY TO SCALE</span>
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#work" class="btn-ghost" data-hover>SEE THE RECEIPTS</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" data-reveal>
+      <span>SCROLL</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- LOGO STRIP -->
+  <section class="strip">
+    <div class="strip-track" id="stripTrack">
+      <span>WE TREAT YOUR AD BUDGET LIKE IT'S OUR OWN&nbsp;&nbsp;★&nbsp;&nbsp;</span>
+      <span>WE TREAT YOUR AD BUDGET LIKE IT'S OUR OWN&nbsp;&nbsp;★&nbsp;&nbsp;</span>
+      <span>WE TREAT YOUR AD BUDGET LIKE IT'S OUR OWN&nbsp;&nbsp;★&nbsp;&nbsp;</span>
+    </div>
+  </section>
+
+  <!-- ABOUT (founder) -->
+  <section class="about" id="about">
+    <div class="about-photo-wrap" data-reveal>
+      <div class="about-photo" id="aboutPhoto">
+        <img src="assets/halimo.jpg" alt="Founder, 1of1 Decision" id="halimoImg" onerror="this.parentElement.classList.add('no-img')" />
+        <div class="photo-fallback">1OF1</div>
+        <div class="photo-badge">FOUNDER</div>
+      </div>
+      <div class="about-photo-tag">@1of1decision</div>
+    </div>
+
+    <div class="about-copy">
+      <span class="section-kicker" data-reveal>01 — WHO WE ARE</span>
+      <h2 class="section-title" data-reveal>
+        Not your average <span class="gold">agency.</span>
+      </h2>
+      <p data-reveal>
+        I'm the founder of <b>1of1 Decision</b>. We build brands, run campaigns, and make
+        founders impossible to ignore. Started in Egypt, now scaling clients across the map.
+      </p>
+      <p data-reveal>
+        While everyone else is "doing content," we're doing math — attention in,
+        revenue out. That's the whole game. And we love this game.
+      </p>
+      <div class="about-tags" data-reveal>
+        <span>MEDIA BUYING</span>
+        <span>UGC & CREATIVE</span>
+        <span>EMAIL & SMS</span>
+        <span>ATTRIBUTION</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS / STATS -->
+  <section class="results" id="results">
+    <span class="section-kicker center" data-reveal>02 — THE NUMBERS DON'T LIE</span>
+    <h2 class="section-title center" data-reveal>Receipts over <span class="gold">promises.</span></h2>
+
+    <div class="stats">
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="1000000" data-prefix="$" data-suffix="M+" data-divide="1000000">0</div>
+        <div class="stat-label">Revenue &amp; pipeline scaled</div>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="21" data-suffix="">0</div>
+        <div class="stat-label">International accounts</div>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="7" data-suffix="">0</div>
+        <div class="stat-label">Countries scaled in</div>
+      </div>
+      <div class="stat" data-reveal>
+        <div class="stat-num" data-count="2900" data-prefix="+" data-suffix="%">0</div>
+        <div class="stat-label">Best month growth</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="work" id="work">
+    <span class="section-kicker center" data-reveal>03 — CASE STUDIES</span>
+    <h2 class="section-title center" data-reveal>Brands we made <span class="gold">dangerous.</span></h2>
+    <p class="work-intro" data-reveal>Real stores. Real Shopify dashboards. Real money. Scroll the receipts. 👇</p>
+
+    <!-- Case 1: Nature's Garden Crafts -->
+    <article class="case" data-reveal>
+      <div class="case-info">
+        <div class="case-brand">
+          <img src="assets/cs-ngc-logo.jpg" alt="Nature's Garden Crafts" />
+          <div>
+            <h3>Nature's Garden Crafts</h3>
+            <span>DIY Fragrance &amp; Supply · USA</span>
+          </div>
+        </div>
+        <div class="case-headline gold">+2,900% Revenue<br>in 30 Days</div>
+        <div class="case-metrics">
+          <div><b data-count="189387" data-prefix="$" data-suffix="">0</b><span>Total sales</span></div>
+          <div><b data-count="5040" data-suffix="" data-fmt="k">0</b><span>Orders</span></div>
+          <div><b data-count="674" data-suffix="%" data-divide="100" data-dec="2">0</b><span>Conv. rate</span></div>
+        </div>
+        <p class="case-copy">
+          We took an established supply brand and put it on steroids. Isolated the
+          high-LTV hobbyists, hit them with "Common Mistakes" hooks and 72-hour
+          flash drops, then rebuilt the funnel until it bled a <b>6.74% conversion rate</b>.
+          Thirty days later: <b>$189.3K</b> and a brand that couldn't keep up with its own demand.
+        </p>
+        <ul class="case-strat">
+          <li>High-LTV audience isolation</li>
+          <li>Hook-driven UGC + urgency offers</li>
+          <li>Full conversion-path overhaul</li>
+        </ul>
+      </div>
+      <div class="case-proof" data-tilt>
+        <div class="proof-shot"><img src="assets/cs-ngc-results.jpg" alt="Nature's Garden Crafts Shopify results" /></div>
+        <div class="proof-tag">SHOPIFY · LAST 30 DAYS</div>
+      </div>
+    </article>
+
+    <!-- Case 2: Seji's World -->
+    <article class="case reverse" data-reveal>
+      <div class="case-info">
+        <div class="case-brand">
+          <img src="assets/cs-seji-logo.jpg" alt="Seji's World" />
+          <div>
+            <h3>Seji's World</h3>
+            <span>Toys &amp; Collectibles · Amsterdam, NL</span>
+          </div>
+        </div>
+        <div class="case-headline gold">+940% Revenue<br>in 30 Days</div>
+        <div class="case-metrics">
+          <div><b data-count="39343" data-prefix="€" data-suffix="">0</b><span>Total sales</span></div>
+          <div><b data-count="828" data-suffix="">0</b><span>Orders</span></div>
+          <div><b data-count="841" data-prefix="+" data-suffix="%">0</b><span>Order volume</span></div>
+        </div>
+        <p class="case-copy">
+          A beloved Amsterdam toy store with a goldmine of viral inventory — and zero
+          e-com engine. We turned their shelves into short-form ad fuel, aimed it at
+          rabid collectors and anime communities, and built funnels that printed.
+          <b>€39.3K</b> and <b>828 orders</b> later, the local shop went global.
+        </p>
+        <ul class="case-strat">
+          <li>Creative-led paid media (short-form)</li>
+          <li>Collector &amp; anime niche targeting</li>
+          <li>Automated conversion funnels</li>
+        </ul>
+      </div>
+      <div class="case-proof" data-tilt>
+        <div class="proof-shot"><img src="assets/cs-seji-results.jpg" alt="Seji's World Shopify results" /></div>
+        <div class="proof-tag">SHOPIFY · LAST 30 DAYS</div>
+      </div>
+    </article>
+
+    <!-- Case 3: Cheekbone Beauty -->
+    <article class="case" data-reveal>
+      <div class="case-info">
+        <div class="case-brand">
+          <img src="assets/cs-cheekbone-logo.jpg" alt="Cheekbone Beauty" />
+          <div>
+            <h3>Cheekbone Beauty</h3>
+            <span>B-Corp Cosmetics · Canada</span>
+          </div>
+        </div>
+        <div class="case-headline gold">$35.5K<br>in 7 Days</div>
+        <div class="case-metrics">
+          <div><b data-count="35536" data-prefix="$" data-suffix="">0</b><span>Sales (7 days)</span></div>
+          <div><b data-count="109" data-prefix="+" data-suffix="%">0</b><span>Revenue jump</span></div>
+          <div><b data-count="112" data-prefix="+" data-suffix="%">0</b><span>Orders surge</span></div>
+        </div>
+        <p class="case-copy">
+          An established, B-Corp certified beauty brand with real authority — we just
+          poured fuel on it. Aggressive conversion-focused acquisition, high-AOV bundles,
+          and ruthless ROAS optimization. In a single <b>7-day</b> window we doubled their
+          weekly trajectory: <b>$35.5K</b> and a <b>+112% order surge</b>.
+        </p>
+        <ul class="case-strat">
+          <li>High-intent audience scaling</li>
+          <li>Value-first bundle &amp; AOV strategy</li>
+          <li>ROAS-obsessed optimization</li>
+        </ul>
+      </div>
+      <div class="case-proof" data-tilt>
+        <div class="proof-shot"><img src="assets/cs-cheekbone-results.jpg" alt="Cheekbone Beauty Shopify results" /></div>
+        <div class="proof-tag">SHOPIFY · LAST 7 DAYS</div>
+      </div>
+    </article>
+  </section>
+
+  <!-- FRAMEWORK -->
+  <section class="framework" id="framework">
+    <span class="section-kicker center" data-reveal>04 — HOW WE DO IT</span>
+    <h2 class="section-title center" data-reveal>The <span class="gold">Velocity Engine.</span></h2>
+    <p class="work-intro" data-reveal>Six weapons. One ruthless system. Zero guessing.</p>
+
+    <!-- Core pillars -->
+    <div class="pillars">
+      <div class="pillar" data-reveal><div class="pillar-no">01</div><h3>Precision Media Buying</h3><p>Hyper-targeted campaigns that turn every dollar of ad spend into predictable revenue.</p></div>
+      <div class="pillar" data-reveal><div class="pillar-no">02</div><h3>Affiliate Engines</h3><p>High-converting networks and performance partnerships that drive volume without the overhead.</p></div>
+      <div class="pillar" data-reveal><div class="pillar-no">03</div><h3>Digital Product Scaling</h3><p>Courses, SaaS, and digital assets scaled globally — from optimization to acquisition.</p></div>
+      <div class="pillar" data-reveal><div class="pillar-no">04</div><h3>Retention (Email &amp; SMS)</h3><p>High-converting flows that max out LTV and turn cold traffic into recurring buyers on autopilot.</p></div>
+      <div class="pillar" data-reveal><div class="pillar-no">05</div><h3>Creative &amp; UGC</h3><p>Scroll-stopping, hook-driven creative engineered to disrupt feeds and weaponize attention.</p></div>
+      <div class="pillar" data-reveal><div class="pillar-no">06</div><h3>Analytics &amp; Attribution</h3><p>No dark data. Bulletproof server-side tracking and dashboards — 100% clarity on profit.</p></div>
+    </div>
+
+    <!-- 3-step engine -->
+    <div class="engine">
+      <div class="engine-step" data-reveal>
+        <span class="engine-num">I</span>
+        <h3>Data &amp; Creative Architecture</h3>
+        <p>We don't guess; we test. Build bulletproof tracking, then design a creative strategy around raw UGC and high-impact hooks built for your exact audience.</p>
+      </div>
+      <div class="engine-step" data-reveal>
+        <span class="engine-num">II</span>
+        <h3>Aggressive Media Deployment</h3>
+        <p>Advanced scaling on Meta, Google &amp; TikTok to dominate auctions, max CTR, and drive acquisition costs into the floor.</p>
+      </div>
+      <div class="engine-step" data-reveal>
+        <span class="engine-num">III</span>
+        <h3>Retention &amp; Attribution</h3>
+        <p>Scaling doesn't stop at the first sale. Hyper-segmented Email &amp; SMS extract backend profit while deep attribution scales the winning hooks.</p>
+      </div>
+    </div>
+
+    <!-- Proven impact table -->
+    <div class="impact" data-reveal>
+      <div class="impact-head">PROVEN IMPACT — BY THE NUMBERS</div>
+      <div class="impact-row"><span>Total global client footprint</span><b>7 Countries (EG · US · CA · UK · AU · NZ · NL)</b></div>
+      <div class="impact-row"><span>Avg. monthly ad spend / client</span><b>$6,000</b></div>
+      <div class="impact-row"><span>Total managed network spend</span><b>$126,000 / month</b></div>
+      <div class="impact-row"><span>Total revenue / pipeline generated</span><b>$1,000,000+</b></div>
+      <div class="impact-row"><span>Primary platforms</span><b>Meta · Google · TikTok</b></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <span class="section-kicker center" data-reveal>05 — WHAT THEY SAY</span>
+    <h2 class="section-title center" data-reveal>Founders don't <span class="gold">whisper.</span></h2>
+
+    <div class="review-grid">
+      <blockquote class="review" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"The creative strategy alone completely changed our trajectory. Ad fatigue was killing our margins. They structured a brilliant UGC framework, deployed it across Meta and TikTok, and our CTR skyrocketed. Finally a predictable, data-driven way to scale."</p>
+        <footer>— E-Commerce Founder</footer>
+      </blockquote>
+      <blockquote class="review" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"Scaling a digital product requires a deeply optimized funnel, and these guys nailed it. They maxed our front-end media buying and their backend Email &amp; SMS automated our LTV. We're seeing incredible returns on our pipeline."</p>
+        <footer>— Digital Product &amp; SaaS Founder</footer>
+      </blockquote>
+      <blockquote class="review" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"Bulletproof tracking and pure performance. Their attribution setup took all the guesswork out of our numbers — we see exactly where every dollar of profit comes from. Combined with their affiliate engine, they scaled us into international markets smoothly."</p>
+        <footer>— Growth Director</footer>
+      </blockquote>
+      <blockquote class="review" data-reveal>
+        <div class="stars">★★★★★</div>
+        <p>"An absolute powerhouse team. They handle everything — from high-converting creative scripts to server-side tracking and aggressive scaling. One partner managing media buying, UGC, and retention under one framework is what turned us into a global revenue engine."</p>
+        <footer>— International Brand Owner</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- GAME (secondary, fun) -->
+  <section class="game-sec" id="game">
+    <span class="section-kicker center" data-reveal>BONUS — WHILE YOU'RE HERE</span>
+    <h2 class="section-title center" data-reveal>Got the <span class="gold">instincts?</span></h2>
+    <p class="game-intro" data-reveal>
+      30 seconds. Catch the cash 💵, dodge the bad deals 💣. A little game while you decide to make the right one.
+    </p>
+
+    <div class="game-frame" data-reveal>
+      <div class="game-hud">
+        <div class="hud-item">SCORE <b id="gScore">0</b></div>
+        <div class="hud-item">TIME <b id="gTime">30</b></div>
+        <div class="hud-item">BEST <b id="gBest">0</b></div>
+      </div>
+      <canvas id="gameCanvas"></canvas>
+      <div class="game-overlay" id="gameOverlay">
+        <div class="game-msg" id="gameMsg">READY TO STACK?</div>
+        <div class="game-sub" id="gameSub">Move your mouse / finger to catch the cash.</div>
+        <button class="btn-primary" id="gameBtn" data-hover><span>START</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / APPLY -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <span class="section-kicker center" data-reveal>06 — YOUR MOVE</span>
+      <h2 class="contact-title">
+        <span class="line"><span class="word">APPLY TO</span></span>
+        <span class="line"><span class="word gold">SCALE.</span></span>
+      </h2>
+      <p data-reveal>We only take on brands we know we can make dangerous. Tell us about yours — if it's a fit, we'll reach out to lock in a call.</p>
+
+      <form class="apply-form" id="applyForm" data-reveal novalidate>
+        <div class="field">
+          <label>Full name</label>
+          <input type="text" name="name" placeholder="Your name" required />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="you@brand.com" required />
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <div class="combo">
+            <select name="dial" id="dialSelect" required></select>
+            <input type="tel" name="phone" placeholder="Phone number" required />
+          </div>
+        </div>
+        <div class="field">
+          <label>Business URL</label>
+          <input type="url" name="url" placeholder="https://yourstore.com" required />
+        </div>
+        <div class="field">
+          <label>Type of business</label>
+          <select name="type" required>
+            <option value="" disabled selected>Select one…</option>
+            <option>E-commerce / Shopify</option>
+            <option>Digital product / SaaS</option>
+            <option>Coaching / Info product</option>
+            <option>Local / Brick-and-mortar</option>
+            <option>Personal brand / Creator</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Monthly ad budget</label>
+          <div class="combo">
+            <select name="currency" id="currencySelect" required></select>
+            <select name="budget" required>
+              <option value="" disabled selected>Select range…</option>
+              <option>Under 1,000 / mo</option>
+              <option>1,000 – 3,000 / mo</option>
+              <option>3,000 – 6,000 / mo</option>
+              <option>6,000 – 15,000 / mo</option>
+              <option>15,000 – 50,000 / mo</option>
+              <option>50,000+ / mo</option>
+            </select>
+          </div>
+        </div>
+        <div class="field full">
+          <label>Anything else? (optional)</label>
+          <textarea name="message" rows="3" placeholder="Tell us where you're stuck and where you want to be."></textarea>
+        </div>
+        <button type="submit" class="btn-primary big" data-hover data-magnetic>
+          <span>SEND APPLICATION</span>
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="form-note" id="formNote">🔒 We review every application personally. Only serious brands, please.</p>
+      </form>
+
+      <!-- success state -->
+      <div class="apply-success" id="applySuccess" hidden>
+        <div class="game-msg gold">YOU'RE IN. 🤝</div>
+        <p>Last step — fire your details straight to us. Pick your weapon:</p>
+        <div class="contact-actions">
+          <a href="#" id="waSend" target="_blank" rel="noopener" class="btn-primary big" data-hover data-magnetic><span>SEND ON WHATSAPP</span></a>
+          <a href="https://www.instagram.com/1of1decision?igsh=MTl4NzEwZnByZHphcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="btn-ghost" data-hover>OR DM ON INSTAGRAM</a>
+        </div>
+      </div>
+
+      <div class="contact-socials" data-reveal>
+        <a href="https://www.instagram.com/1of1decision?igsh=MTl4NzEwZnByZHphcQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" data-hover>INSTAGRAM</a>
+        <a href="https://wa.me/201141716575" target="_blank" rel="noopener" data-hover>WHATSAPP</a>
+        <a href="#" data-hover>TIKTOK</a>
+        <a href="mailto:hello@1of1decision.com" data-hover>EMAIL</a>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>© <span id="year"></span> 1OF1 DECISION. ALL GAINS RESERVED.</span>
+      <span>PERFORMANCE MARKETING — EGYPT → WORLD 🌍</span>
+    </footer>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

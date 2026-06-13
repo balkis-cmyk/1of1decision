@@ -1,0 +1,11 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Original source files at repo root (the site serves cleaned copies in assets/)
+/Cheekbone Beauty Cosmetics INC/
+/Nature's Garden Crafts/
+/Seji’s World/
+/logo.PNG
+/logo Background Removed.png
+/IMG_*.jpg
