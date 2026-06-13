@@ -114,11 +114,7 @@ if (window.gsap && window.ScrollTrigger) {
     scrollTrigger: { trigger: '.contact', start: 'top 70%' },
   });
 
-  // strip marquee scroll-velocity skew
-  gsap.to('#stripTrack', {
-    xPercent: -33, ease: 'none',
-    scrollTrigger: { trigger: '.strip', start: 'top bottom', end: 'bottom top', scrub: 1 },
-  });
+  // (strip marquee now auto-scrolls continuously via CSS)
 
   // about photo parallax
   gsap.to('#aboutPhoto', {
