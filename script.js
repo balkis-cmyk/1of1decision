@@ -153,6 +153,14 @@ if (window.gsap && window.ScrollTrigger) {
     });
   });
 
+  // services / pillars — snappy staggered pop-in (faster than generic reveal)
+  if (document.querySelector('.pillar')) {
+    gsap.from('.pillar', {
+      opacity: 0, y: 34, scale: .94, duration: .45, ease: 'back.out(1.6)', stagger: .05,
+      scrollTrigger: { trigger: '#pillars', start: 'top 82%', once: true },
+    });
+  }
+
   // case-study proof cards: 3D tilt on hover
   document.querySelectorAll('[data-tilt] .proof-shot').forEach(shot => {
     const card = shot.closest('[data-tilt]');
@@ -216,6 +224,39 @@ document.getElementById('burger')?.addEventListener('click', () => {
   const t = document.getElementById('contact');
   if (lenis) lenis.scrollTo(t); else t.scrollIntoView({ behavior: 'smooth' });
 });
+
+/* ---------- REVIEWS RAIL (drag + arrows, Google-style) ---------- */
+(function reviewRail() {
+  const rail = document.getElementById('reviewRail');
+  if (!rail) return;
+  let down = false, startX = 0, startScroll = 0, moved = false;
+
+  rail.addEventListener('pointerdown', e => {
+    down = true; moved = false; startX = e.clientX; startScroll = rail.scrollLeft;
+    rail.classList.add('dragging');
+    try { rail.setPointerCapture(e.pointerId); } catch (_) {}
+  });
+  rail.addEventListener('pointermove', e => {
+    if (!down) return;
+    const dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) moved = true;
+    rail.scrollLeft = startScroll - dx;
+  });
+  const end = () => { down = false; rail.classList.remove('dragging'); };
+  rail.addEventListener('pointerup', end);
+  rail.addEventListener('pointercancel', end);
+  // prevent a drag from triggering link/click inside cards
+  rail.addEventListener('click', e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+  const step = () => {
+    const card = rail.querySelector('.rev');
+    const gap = parseInt(getComputedStyle(rail).columnGap || getComputedStyle(rail).gap) || 22;
+    return card ? card.offsetWidth + gap : 340;
+  };
+  document.querySelectorAll('[data-rail]').forEach(btn => {
+    btn.addEventListener('click', () => rail.scrollBy({ left: (+btn.dataset.rail) * step(), behavior: 'smooth' }));
+  });
+})();
 
 /* ---------- APPLY FORM (qualify before DM) ---------- */
 (function applyForm() {
