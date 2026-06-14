@@ -365,13 +365,13 @@ section{position:relative;z-index:2}
 
 /* ============ FRAMEWORK ============ */
 .framework{max-width:var(--maxw);margin:0 auto;padding:6rem clamp(1.2rem,4vw,3rem)}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3rem}
 .pillar{position:relative;display:flex;flex-direction:column;gap:.7rem;padding:1.9rem 1.7rem;
   border:1px solid var(--line);border-radius:18px;overflow:hidden;
   background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
   transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .4s,box-shadow .4s}
-.pillar:hover{transform:translateY(-7px);border-color:rgba(190,201,216,.5);
-  box-shadow:0 34px 60px -34px rgba(0,0,0,.85),0 0 46px -20px rgba(190,201,216,.45)}
+.pillar:hover{transform:translateY(-6px);border-color:rgba(190,201,216,.5);
+  box-shadow:0 24px 44px -28px rgba(0,0,0,.85),0 0 26px -16px rgba(190,201,216,.4)}
 /* diagonal shine sweep on hover */
 .pillar::after{content:"";position:absolute;top:0;left:-70%;width:55%;height:100%;pointer-events:none;
   background:linear-gradient(105deg,transparent,rgba(255,255,255,.10),transparent);
@@ -388,7 +388,10 @@ section{position:relative;z-index:2}
 .pillar-no{position:absolute;top:1.6rem;right:1.6rem;font-family:'Space Mono';font-size:.74rem;color:var(--muted)}
 .pillar h3{font-family:'Archivo';font-weight:900;font-size:1.18rem;line-height:1.15;margin-top:.15rem;padding-right:2rem}
 .pillar p{color:var(--muted);font-weight:600;line-height:1.5;font-size:.95rem}
-.engine{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.engine-head{margin-top:5rem;padding-top:3.5rem;border-top:1px solid var(--line);text-align:center}
+.engine-title{font-family:'Anton';font-weight:400;text-transform:uppercase;line-height:1;
+  font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.01em}
+.engine{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem}
 .engine-step{border:1px solid var(--line);border-radius:16px;padding:2.2rem 1.8rem;position:relative;
   background:linear-gradient(180deg,rgba(190,201,216,.04),transparent)}
 .engine-num{font-family:'Playfair Display';font-weight:900;font-size:3rem;
@@ -512,6 +515,7 @@ section{position:relative;z-index:2}
   /* intros & grids sit closer to their headings */
   .work-intro,.game-intro{margin-top:.8rem;font-size:1rem}
   .stats,.pillars,.engine,.review-rail,.impact,.svc-list{margin-top:1.8rem}
+  .engine-head{margin-top:2.8rem;padding-top:2.4rem}
   .flags{margin-top:2.4rem}
   .reviews-head{align-items:flex-start}
   .rail-hint{display:none}
