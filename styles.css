@@ -546,3 +546,64 @@ section{position:relative;z-index:2}
   .hero-eyebrow{margin-bottom:1rem}
   .hero-scroll{display:none}
 }
+
+/* ============================================================
+   AI — THE UNFAIR ADVANTAGE
+============================================================ */
+.ai{max-width:var(--maxw);margin:0 auto;padding:6rem clamp(1.2rem,4vw,3rem)}
+.tag-ai{color:#fff !important;border-color:rgba(190,201,216,.55) !important;
+  background:linear-gradient(160deg,rgba(190,201,216,.22),rgba(190,201,216,.04))}
+.ai-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(2rem,5vw,4rem);
+  align-items:center;margin-top:3.2rem}
+
+/* animated AI core orb */
+.ai-core{display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+.ai-orb{position:relative;width:min(300px,74vw);aspect-ratio:1;display:grid;place-items:center}
+.ai-ring{position:absolute;border-radius:50%;border:1px solid rgba(190,201,216,.28)}
+.ai-ring.r1{inset:0;border-style:dashed;animation:spin 18s linear infinite}
+.ai-ring.r2{inset:14%;border-color:rgba(190,201,216,.4);animation:spin 12s linear infinite reverse}
+.ai-ring.r3{inset:30%;border-style:dashed;border-color:rgba(238,242,247,.5);animation:spin 8s linear infinite}
+.ai-orb-core{position:relative;width:40%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+  font-family:'Anton';font-size:clamp(1.5rem,5vw,2.4rem);color:#0a0a0a;letter-spacing:.02em;
+  background:radial-gradient(circle at 35% 28%,#ffffff,#aab1bb 58%,#6e7378);
+  box-shadow:0 0 50px rgba(190,201,216,.5),inset 0 0 22px rgba(255,255,255,.6);
+  animation:aiPulse 3s ease-in-out infinite}
+@keyframes aiPulse{50%{box-shadow:0 0 85px rgba(190,201,216,.85),inset 0 0 22px rgba(255,255,255,.7)}}
+/* nodes that ride the rings */
+.ai-node{position:absolute;border-radius:50%}
+.ai-node::before{content:"";position:absolute;top:-5px;left:50%;transform:translateX(-50%);
+  width:11px;height:11px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 12px rgba(238,242,247,.95)}
+.ai-node.n1{inset:0;animation:spin 18s linear infinite}
+.ai-node.n2{inset:14%;animation:spin 12s linear infinite reverse}
+.ai-node.n3{inset:30%;animation:spin 8s linear infinite}
+.ai-core-label{font-family:'Space Mono';font-size:.72rem;letter-spacing:.22em;color:var(--gold-2)}
+@media(prefers-reduced-motion:reduce){.ai-ring,.ai-node,.ai-orb-core{animation:none}}
+
+/* AI capability cards */
+.ai-caps{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.ai-cap{display:flex;gap:1rem;padding:1.4rem;border:1px solid var(--line);border-radius:16px;
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));
+  transition:transform .35s,border-color .35s}
+.ai-cap:hover{transform:translateY(-5px);border-color:rgba(190,201,216,.5)}
+.ai-cap-ic{flex:0 0 auto;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+  color:var(--gold-2);border:1px solid rgba(190,201,216,.28);
+  background:linear-gradient(160deg,rgba(190,201,216,.20),rgba(190,201,216,.03))}
+.ai-cap-ic svg{width:22px;height:22px}
+.ai-cap h3{font-family:'Archivo';font-weight:900;font-size:1.04rem;margin-bottom:.3rem;line-height:1.15}
+.ai-cap p{color:var(--muted);font-weight:600;line-height:1.45;font-size:.88rem}
+
+.ai-banner{margin-top:3rem;text-align:center;border:1px solid var(--line);border-radius:16px;padding:1.7rem 1.4rem;
+  font-family:'Anton';font-weight:400;font-size:clamp(1.1rem,2.7vw,1.9rem);letter-spacing:.01em;
+  text-transform:uppercase;line-height:1.15;background:linear-gradient(180deg,rgba(190,201,216,.07),transparent)}
+
+@media(max-width:900px){
+  .ai-grid{grid-template-columns:1fr;gap:2.4rem}
+}
+@media(max-width:560px){
+  .ai-caps{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .ai{padding-top:3.4rem;padding-bottom:3.4rem}
+  .ai-grid{margin-top:2rem}
+  .ai-banner{margin-top:2rem}
+}
